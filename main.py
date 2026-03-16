@@ -1,5 +1,6 @@
 from src.extract import buscar_campeonatos
 from src.transform import limpar_campeonatos
+from src.load import salvar_parquet
 
 def executar_pipeline():
     print('Iniciando Pipeline...')
@@ -11,9 +12,9 @@ def executar_pipeline():
 
         if tabela_final is not None:
             print('Transformação concluída com sucesso.')  
-            print(tabela_final)
-        else:
-            print('Erro na transformação dos dados')
+            sucesso_carga = salvar_parquet(tabela_final, "campeonatos_ingleses")
+        if sucesso_carga:
+            print('Pipeline completo executado com sucesso!')
     else:
         print('Erro na extração. O Pipeline parou.')
 
