@@ -1,0 +1,20 @@
+[project]
+name = "pipeline-api-dados"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "alan",email = "alanamorim28@gmail.com"}
+]
+package-mode = false
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pandas (>=3.0.1,<4.0.0)",
+    "requests (>=2.32.5,<3.0.0)",
+    "python-dotenv (>=1.2.2,<2.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
